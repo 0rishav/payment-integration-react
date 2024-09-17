@@ -1,0 +1,286 @@
+/* Styles for header */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.list {
+  background-color: black;
+  display: flex;
+  padding: 20px 0px;
+  gap: 50px;
+  justify-content: space-evenly;
+}
+
+li {
+  color: white;
+  list-style: none;
+  background-color: rgb(67, 69, 83);
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Style for Register Page */
+
+/* .modal-overlay {
+  height: 100%;
+  width: 100%;
+
+} */
+
+.card {
+  inset: 0;
+  margin: auto;
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  background-color: white;
+  max-width: 400px;
+  max-height: 400px;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-inline: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.dialog h2 {
+  margin-bottom: 1rem;
+}
+
+.register-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  outline: none;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+ 
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.open-modal-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for Subscription page */
+
+.subscription-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.plan-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.plan-selector button {
+  padding: 10px 30px;
+  margin: 0 10px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plan-selector button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.plan-selector button:hover {
+  background-color: #0056b3;
+  color: white;
+}
+
+.plan {
+  margin-bottom: 30px;
+}
+
+.plan h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.plan p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.subscription-form {
+  margin-top: 30px;
+}
+
+.subscription-form label {
+  display: block;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.subscription-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.subscribe-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Styles for Verification */
+
+
+.dialog {
+  text-align: center;
+}
+
+.otp-form {
+  margin-top: 20px;
+}
+
+.otp-inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  height: 100%;
+  width: 100%;
+}
+
+.otp-inputs input{
+  height: 50px;
+  width: 70px;
+  outline: none;
+  border: 2px solid #8c9eb3;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+/* Mobile Design */
+@media (max-width: 640px) {
+  .subscription-container{
+    width: auto;
+    margin:1rem 1rem;
+  }
+  .plan-selector {
+    flex-direction: column;
+  }
+
+  .plan-selector button {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* LOADER DESIGN */
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+.spinner {
+  border: 8px solid #f3f3f3; /* Light grey background */
+  border-top: 8px solid #3498db; /* Blue color for the spinning part */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1.5s linear infinite; /* Spin animation */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
