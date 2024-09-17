@@ -22,4 +22,4 @@ Make sure you have the following installed:
 
 ```bash
 git clone https://github.com/0rishav/payment-integration-react.git
-cd your-repository/frontend
+cd frontend
