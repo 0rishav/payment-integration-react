@@ -284,3 +284,104 @@ p {
   font-size: 1.2rem;
   color: #333;
 }
+
+
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main h1{
+  text-align: center;
+  margin: 2rem 0rem;
+  font-size: 25px;
+  font-family: cursive;
+  font-weight: 800;
+}
+
+.main h2{
+  text-align: center;
+  font-size: 20px;
+  font-family: cursive;
+  font-weight: 800;
+  background-color: rgb(0, 154, 165);
+  padding: 5px 1rem;
+  border-radius: 20px;
+}
+
+.container{
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, auto); 
+  align-items: center;   
+  justify-content: center; 
+  height: 80vh;
+}
+
+.grid{
+  height: 300px;
+  width: 300px;
+  background-color: rgb(253, 253, 253);
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+.grid h1{
+  margin-bottom: 10px;
+}
+
+.grid span{
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.grid strong{
+  font-size: 20px;
+  color: rgb(109, 126, 141);
+}
+
+.grid p{
+  margin-bottom: 10px;
+  color: rgb(92, 95, 95);
+}
+
+.grid button{
+  padding: 5px 80px;
+  background-color: rgb(54, 53, 54);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: cursive;
+  color: white;
+  cursor: pointer;
+}
+
+
+.redirect{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-data{
+  position: fixed;
+  margin: auto;
+  inset: 0;
+  height: 300px;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+

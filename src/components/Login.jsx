@@ -48,7 +48,7 @@ const Login = () => {
         }
 
         toast.success(response.message || 'Login successful!');
-        navigate("/subscription"); 
+        navigate("/price-plan"); 
       } else {
         toast.error(response.message || 'Login failed. Please try again.');
       }
