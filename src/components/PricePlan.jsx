@@ -22,24 +22,23 @@ const PricePlan = () => {
       return data.order;
     } catch (error) {
       console.error('Error initiating payment:', error.message);
-      // Handle error (show notification to the user, etc.)
+      
     }
   };
 
-  // Function to handle Razorpay payment
   const handlePayment = (order) => {
     const options = {
-      key: import.meta.env.VITE_RAZORPAY_KEY_ID, // Your Razorpay key ID
-      amount: order.amount, // Amount in paise
+      key: import.meta.env.VITE_RAZORPAY_KEY_ID, 
+      amount: order.amount, 
       currency: order.currency,
       name: 'Green Goblin',
       description: 'Payment for courses',
       order_id: order.id,
       handler: async (response) => {
         try {
-          // Extract subscription_plan from receipt
+         
           const receiptParts = order.receipt.split('_');
-          const plan = receiptParts[1]; // Extract subscription_plan from receipt
+          const plan = receiptParts[1]; 
   
           const result = await axios.post(
             'http://localhost:8000/api/v1/verify-payment',
@@ -47,8 +46,8 @@ const PricePlan = () => {
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_order_id: response.razorpay_order_id,
               razorpay_signature: response.razorpay_signature,
-              amount: order.amount / 100, // Convert paise to rupees
-              subscription_plan: plan, // Pass extracted plan
+              amount: order.amount / 100,
+              subscription_plan: plan, 
             },
             { withCredentials: true }
           );
@@ -58,16 +57,14 @@ const PricePlan = () => {
             throw new Error('Payment verification failed');
           }
   
-          // Handle successful payment verification
           toast.success('Payment verified successfully');
           navigate("/redirect");
         } catch (error) {
           console.error('Error verifying payment:', error.message);
-          // Handle error (show notification to the user, etc.)
         }
       },
       prefill: {
-        name: '', // Optionally set user details
+        name: '', 
         email: '',
       },
       theme: {
@@ -79,24 +76,21 @@ const PricePlan = () => {
     paymentObject.open();
   };
 
-  // Handler for button clicks
   const handleButtonClick = async (plan) => {
     let amount;
     switch (plan) {
       case 'Intermediate':
-        amount = 4900; // Amount in paise
+        amount = 4900; 
         break;
       case 'Advanced':
-        amount = 7900; // Amount in paise
+        amount = 7900; 
         break;
       default:
         amount = 0;
     }
   
-    // Initiate payment
     const order = await initiatePayment(amount, plan);
   
-    // Handle payment gateway
     if (order) {
       handlePayment(order);
     }
