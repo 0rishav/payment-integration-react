@@ -21,5 +21,10 @@ Make sure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
+
 git clone https://github.com/your-username/your-repository.git
 cd your-repository/frontend
+=======
+git clone https://github.com/0rishav/payment-integration-react.git
+cd frontend
+
